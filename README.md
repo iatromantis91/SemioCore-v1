@@ -37,10 +37,9 @@ SemioCore releases are intended to be archived on Zenodo. For reproducible citat
 @software{huerta_castillo_semiocore,
   author  = {Huerta Castillo, Israel},
   title   = {SemioCore},
-  url     = {https://github.com/iatromantis91/semiocore-v1},
-  version = {1.3.3},
+  url     = {https://github.com/iatromantis91/SemioCore},
   date    = {2026-01-13},
-  doi     = {<ZENODO_VERSION_DOI>}
+  doi     = {https://doi.org/10.5281/zenodo.18237327}
 }
 ```
 
@@ -70,9 +69,9 @@ python -m semioc biomed --help
 python -m semioc audit --help
 ```
 
-## Biomedical Level C quickstart (fixtures + golden outputs)
+## Biomedical quickstart (fixtures + golden outputs)
 
-The repository includes Level C fixtures and golden outputs:
+The repository includes this fixtures and golden outputs:
 
 - Inputs:
   - `fixtures/biomed_io_v1/levelc/labs_t*.json`
