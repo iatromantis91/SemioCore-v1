@@ -1,0 +1,27 @@
+{
+  "$id": "semiocore.biomed.score.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.score.v1"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tool_version": {"type": "string"},
+        "created_utc": {"type": "string"},
+        "input_hash": {"type": "string"}
+      },
+      "required": ["tool_version", "created_utc", "input_hash"]
+    },
+    "input_schema": {"type": "string"},
+    "recipe": {"type": "string"},
+    "score": {"type": "number"},
+    "features": {"type": "object"},
+    "qc": {"type": "object"},
+    "details": {"type": "object"},
+    "extra": {"type": "object"}
+  },
+  "required": ["schema", "provenance", "input_schema", "recipe", "score", "features", "qc"]
+}

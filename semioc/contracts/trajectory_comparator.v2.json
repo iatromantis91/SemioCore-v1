@@ -1,0 +1,19 @@
+{
+  "schema": "semiocore.biomed.trajectory_comparator.v2",
+  "name": "trajectory_comparator",
+  "version": "2",
+  "supports_timepoints": ["pre", "post_24h", "post_72h", "post_7d"],
+  "inputs": {
+    "score_artifact": "semiocore.biomed.score.v1",
+    "labels": ["t0", "t24", "t72", "t168"]
+  },
+  "outputs": {
+    "recovery_report": "semiocore.biomed.recovery_report.v1"
+  },
+  "metrics": [
+    "recovery_time_80_hours",
+    "overshoot_max",
+    "coupling_loss"
+  ],
+  "notes": "Comparator V2 is deterministic: it consumes canonical score artifacts and produces a recovery report suitable for downstream plasticity2 inference."
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "semiocore.biomed.coupling_index.v1",
+  "name": "coupling_index",
+  "version": "1",
+  "inputs": {
+    "wearable_timeseries": "semiocore.biomed.wearable_timeseries.v1",
+    "scores": "semiocore.biomed.score.v1"
+  },
+  "outputs": {
+    "coupling_index": "scalar",
+    "components": ["hrv_sleep", "sleep_activity", "hrv_activity"]
+  },
+  "notes": "CouplingIndex measures multichannel coherence. In Level‑C pipelines it is used as an input to plasticity2 (ΔC and coupling loss)."
+}

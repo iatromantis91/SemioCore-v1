@@ -1,0 +1,47 @@
+{
+  "dt_seconds": 14400,
+  "schema": "semiocore.biomed.wearable_timeseries.v1",
+  "series": {
+    "hr": {
+      "unit": "bpm",
+      "values": [
+        59,
+        61,
+        62,
+        60,
+        61,
+        60
+      ]
+    },
+    "hrv_rmssd": {
+      "unit": "ms",
+      "values": [
+        35,
+        38,
+        34,
+        36,
+        37,
+        39
+      ]
+    },
+    "sleep_minutes": {
+      "unit": "min",
+      "values": [
+        410
+      ]
+    },
+    "steps": {
+      "unit": "count",
+      "values": [
+        1100,
+        1400,
+        1700,
+        1600,
+        1500,
+        1200
+      ]
+    }
+  },
+  "subject_id": "S1",
+  "t0_utc": "1970-01-08T00:00:00Z"
+}

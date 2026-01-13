@@ -1,0 +1,36 @@
+{
+  "$id": "semiocore.biomed.trajectory_comparator.v2",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.trajectory_comparator.v2"},
+    "name": {"const": "trajectory_comparator"},
+    "version": {"const": "2"},
+    "supports_timepoints": {
+      "type": "array",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "score_artifact": {"type": "string"},
+        "labels": {"type": "array", "items": {"type": "string"}}
+      },
+      "required": ["score_artifact", "labels"]
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recovery_report": {"type": "string"}
+      },
+      "required": ["recovery_report"]
+    },
+    "metrics": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": "string"}
+  },
+  "required": ["schema", "name", "version", "supports_timepoints", "inputs", "outputs"]
+}

@@ -1,0 +1,1097 @@
+{
+  "contracts": {
+    "recipes": [
+      "inflammation_score_v1",
+      "metabolic_score_v1",
+      "circadian_score_v1"
+    ],
+    "suite": "biomed_v1"
+  },
+  "manifest": {
+    "baseline_label": "t0",
+    "hash": "3c77fa8a58e43923224a9fc7e9d86dd678d380a0e1cc1311f1be27d782bf0d07",
+    "post_labels": [
+      "t24",
+      "t72",
+      "t168"
+    ],
+    "ref": "fixtures/biomed_io_v1/levelc/intervention_manifest.json",
+    "subject_id": "fixture_subject_01"
+  },
+  "provenance": {
+    "created_utc": "1970-01-01T00:00:00+00:00",
+    "evidence_hash": "28d80229846c5529b131811e5b187d3d9fae285fdb880d05a4edbcfcb0f1c4ea",
+    "tool_version": "1.3.3"
+  },
+  "recipes": [
+    {
+      "kind": "labs",
+      "plasticity2": {
+        "candidate": {
+          "evidence_hash": "72fe6166958513afabffc293d293c17e162dd507abdd41314ff49e8703135739",
+          "metrics": {
+            "D_peak": 0.67,
+            "auc_D": 39.879999999984,
+            "mean_C": 0.842324239897,
+            "mean_R": 0.551133222775,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.plasticity2_report.v1"
+        },
+        "metric_diffs": {
+          "auc_D_abs": 1.6e-11,
+          "mean_C_abs": 0.0,
+          "mean_R_abs": 0.0
+        },
+        "oracle": {
+          "evidence_hash": "72fe6166958513afabffc293d293c17e162dd507abdd41314ff49e8703135739",
+          "metrics": {
+            "D_peak": 0.67,
+            "auc_D": 39.88,
+            "mean_C": 0.842324239897,
+            "mean_R": 0.551133222775,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.plasticity2_report.v1"
+        },
+        "within_tolerance": false
+      },
+      "recipe": "inflammation_score_v1",
+      "recovery": {
+        "candidate": {
+          "evidence_hash": "72fe6166958513afabffc293d293c17e162dd507abdd41314ff49e8703135739",
+          "metrics": {
+            "D_peak": 0.67,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.recovery_report.v1"
+        },
+        "metric_diffs": {
+          "D_peak_abs": 0.0,
+          "t_peak_hours_abs": 0.0,
+          "t_recover_80_hours_abs": 0.0
+        },
+        "oracle": {
+          "evidence_hash": "72fe6166958513afabffc293d293c17e162dd507abdd41314ff49e8703135739",
+          "metrics": {
+            "D_peak": 0.67,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.recovery_report.v1"
+        },
+        "within_tolerance": true
+      },
+      "timepoints": [
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/inflammation_score_v1/t0.score.json",
+          "label": "t0",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/labs_t0.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.11,
+              "score_hash": "cb9418e87a4c71bd4af8db0c4b25a67f334d66daaabc5e17a9ebe93b23638060"
+            },
+            "candidate": {
+              "score": 0.11,
+              "score_hash": "cb9418e87a4c71bd4af8db0c4b25a67f334d66daaabc5e17a9ebe93b23638060"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 1.0,
+                "candidate": 1.0,
+                "feature": "crp_mg_L"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.1,
+                "candidate": 0.1,
+                "feature": "crp_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 1.5,
+                "candidate": 1.5,
+                "feature": "nlr"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.125,
+                "candidate": 0.125,
+                "feature": "nlr_risk"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "442195cca2ac80aa9c2fb7de57ff292a50c0971a166c874f400002ede2128964",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "inflammation_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": true
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/inflammation_score_v1/t24.score.json",
+          "label": "t24",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/labs_t24.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.78,
+              "score_hash": "a364d35e93e9b775fdd1feb09755af58db6d5fe0770b83d1b0cc8bf612119fc8"
+            },
+            "candidate": {
+              "score": 0.78,
+              "score_hash": "a364d35e93e9b775fdd1feb09755af58db6d5fe0770b83d1b0cc8bf612119fc8"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 8.0,
+                "candidate": 8.0,
+                "feature": "crp_mg_L"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.8,
+                "candidate": 0.8,
+                "feature": "crp_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 4.0,
+                "candidate": 4.0,
+                "feature": "nlr"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.75,
+                "candidate": 0.75,
+                "feature": "nlr_risk"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "76af43af0f0b037ad960221d5f3f3ddf89e659251fb8887f52d4a93febdf0553",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "inflammation_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": true
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/inflammation_score_v1/t72.score.json",
+          "label": "t72",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/labs_t72.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.302222222222,
+              "score_hash": "8356f20039d8ceb6ff4333a643195502794655dceb55fee14592fea58e3beca1"
+            },
+            "candidate": {
+              "score": 0.302222222222,
+              "score_hash": "8356f20039d8ceb6ff4333a643195502794655dceb55fee14592fea58e3beca1"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 3.0,
+                "candidate": 3.0,
+                "feature": "crp_mg_L"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.3,
+                "candidate": 0.3,
+                "feature": "crp_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 2.222222222222,
+                "candidate": 2.222222222222,
+                "feature": "nlr"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.305555555556,
+                "candidate": 0.305555555556,
+                "feature": "nlr_risk"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "7f475cbd7989d254d049ae99398a1ab35f24742c89c5c4c4f7a03fa551db4a07",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "inflammation_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/inflammation_score_v1/t168.score.json",
+          "label": "t168",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/labs_t168.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.15,
+              "score_hash": "f124e244b7818aeda7d724f36b09df90d4f974aa9cbf76200e17504c0c13eddd"
+            },
+            "candidate": {
+              "score": 0.15,
+              "score_hash": "f124e244b7818aeda7d724f36b09df90d4f974aa9cbf76200e17504c0c13eddd"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 1.5,
+                "candidate": 1.5,
+                "feature": "crp_mg_L"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.15,
+                "candidate": 0.15,
+                "feature": "crp_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 1.6,
+                "candidate": 1.6,
+                "feature": "nlr"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.15,
+                "candidate": 0.15,
+                "feature": "nlr_risk"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "b46c9d4310bc893ade295fdfaebde1e3776c99e2a3f448c1cc9357c42f589303",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "inflammation_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        }
+      ],
+      "within_tolerance": false
+    },
+    {
+      "kind": "labs",
+      "plasticity2": {
+        "candidate": {
+          "evidence_hash": "2a0c730e45840c0ee1b0e7eb9df8f8a5b2903062bacaeeda925f654624154420",
+          "metrics": {
+            "D_peak": 0.478666666667,
+            "auc_D": 33.156148148196,
+            "mean_C": 0.986263496767,
+            "mean_R": 0.507990547916,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.plasticity2_report.v1"
+        },
+        "metric_diffs": {
+          "auc_D_abs": 4.8e-11,
+          "mean_C_abs": 0.0,
+          "mean_R_abs": 0.0
+        },
+        "oracle": {
+          "evidence_hash": "2a0c730e45840c0ee1b0e7eb9df8f8a5b2903062bacaeeda925f654624154420",
+          "metrics": {
+            "D_peak": 0.478666666667,
+            "auc_D": 33.156148148148,
+            "mean_C": 0.986263496767,
+            "mean_R": 0.507990547916,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.plasticity2_report.v1"
+        },
+        "within_tolerance": false
+      },
+      "recipe": "metabolic_score_v1",
+      "recovery": {
+        "candidate": {
+          "evidence_hash": "2a0c730e45840c0ee1b0e7eb9df8f8a5b2903062bacaeeda925f654624154420",
+          "metrics": {
+            "D_peak": 0.478666666667,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.recovery_report.v1"
+        },
+        "metric_diffs": {
+          "D_peak_abs": 0.0,
+          "t_peak_hours_abs": 0.0,
+          "t_recover_80_hours_abs": 0.0
+        },
+        "oracle": {
+          "evidence_hash": "2a0c730e45840c0ee1b0e7eb9df8f8a5b2903062bacaeeda925f654624154420",
+          "metrics": {
+            "D_peak": 0.478666666667,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.recovery_report.v1"
+        },
+        "within_tolerance": false
+      },
+      "timepoints": [
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/metabolic_score_v1/t0.score.json",
+          "label": "t0",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/labs_t0.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.122476190476,
+              "score_hash": "f875fb770534e6ffd658b48e93d9d03c2525963749dc331fbbe6134c780e4ef5"
+            },
+            "candidate": {
+              "score": 0.122476190476,
+              "score_hash": "f875fb770534e6ffd658b48e93d9d03c2525963749dc331fbbe6134c780e4ef5"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 90.0,
+                "candidate": 90.0,
+                "feature": "fasting_glucose"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.142857142857,
+                "candidate": 0.142857142857,
+                "feature": "glucose_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 5.2,
+                "candidate": 5.2,
+                "feature": "hba1c"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.08,
+                "candidate": 0.08,
+                "feature": "hba1c_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 55.0,
+                "candidate": 55.0,
+                "feature": "hdl"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 2.0,
+                "candidate": 2.0,
+                "feature": "tg_hdl_ratio"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.166666666667,
+                "candidate": 0.166666666667,
+                "feature": "tg_hdl_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 110.0,
+                "candidate": 110.0,
+                "feature": "triglycerides"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "db9133992d82f5f90d1e4a00a9e5b3414096d1f8dfe92c198cc2a4e6ffeeca60",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "metabolic_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/metabolic_score_v1/t24.score.json",
+          "label": "t24",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/labs_t24.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.601142857143,
+              "score_hash": "d0ed8bb6458d5ae937fe71b1686acfd7299bdf1d80ab46a050cd506b6f090599"
+            },
+            "candidate": {
+              "score": 0.601142857143,
+              "score_hash": "d0ed8bb6458d5ae937fe71b1686acfd7299bdf1d80ab46a050cd506b6f090599"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 125.0,
+                "candidate": 125.0,
+                "feature": "fasting_glucose"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.642857142857,
+                "candidate": 0.642857142857,
+                "feature": "glucose_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 5.9,
+                "candidate": 5.9,
+                "feature": "hba1c"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.36,
+                "candidate": 0.36,
+                "feature": "hba1c_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 40.0,
+                "candidate": 40.0,
+                "feature": "hdl"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 4.5,
+                "candidate": 4.5,
+                "feature": "tg_hdl_ratio"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 1.0,
+                "candidate": 1.0,
+                "feature": "tg_hdl_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 180.0,
+                "candidate": 180.0,
+                "feature": "triglycerides"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "f2767dd916b5955e8f59063fef187c93c7a4297dad07fbd3c6f5584c41a1de24",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "metabolic_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/metabolic_score_v1/t72.score.json",
+          "label": "t72",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/labs_t72.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.330264550265,
+              "score_hash": "6b802b6377a4775c2b17fe9f52777a7f8b0fd428320d0073cc73d59f30498646"
+            },
+            "candidate": {
+              "score": 0.330264550265,
+              "score_hash": "6b802b6377a4775c2b17fe9f52777a7f8b0fd428320d0073cc73d59f30498646"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 105.0,
+                "candidate": 105.0,
+                "feature": "fasting_glucose"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.357142857143,
+                "candidate": 0.357142857143,
+                "feature": "glucose_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 5.5,
+                "candidate": 5.5,
+                "feature": "hba1c"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.2,
+                "candidate": 0.2,
+                "feature": "hba1c_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 45.0,
+                "candidate": 45.0,
+                "feature": "hdl"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 3.111111111111,
+                "candidate": 3.111111111111,
+                "feature": "tg_hdl_ratio"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.537037037037,
+                "candidate": 0.537037037037,
+                "feature": "tg_hdl_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 140.0,
+                "candidate": 140.0,
+                "feature": "triglycerides"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "163d3f87280a5c0ddfe924567afb2982c5f7e3bc9f3ab7a614e1f22d91c41ec5",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "metabolic_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/metabolic_score_v1/t168.score.json",
+          "label": "t168",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/labs_t168.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.142546737213,
+              "score_hash": "2fb5b197c2271bccc9ebe1725766eed70e31d4ffd71a699557bf6068165f3836"
+            },
+            "candidate": {
+              "score": 0.142546737213,
+              "score_hash": "2fb5b197c2271bccc9ebe1725766eed70e31d4ffd71a699557bf6068165f3836"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 92.0,
+                "candidate": 92.0,
+                "feature": "fasting_glucose"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.171428571429,
+                "candidate": 0.171428571429,
+                "feature": "glucose_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 5.2,
+                "candidate": 5.2,
+                "feature": "hba1c"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.08,
+                "candidate": 0.08,
+                "feature": "hba1c_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 54.0,
+                "candidate": 54.0,
+                "feature": "hdl"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 2.12962962963,
+                "candidate": 2.12962962963,
+                "feature": "tg_hdl_ratio"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.20987654321,
+                "candidate": 0.20987654321,
+                "feature": "tg_hdl_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 115.0,
+                "candidate": 115.0,
+                "feature": "triglycerides"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "c670a8de1cf05513a4a834a03080d2e9efd4cee51baecf2c9b2429fa1fd2241d",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "metabolic_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        }
+      ],
+      "within_tolerance": false
+    },
+    {
+      "kind": "wearable",
+      "plasticity2": {
+        "candidate": {
+          "evidence_hash": "783c890ff63d46e4fee302840e187a9c5c066406257bec5108ee1dafd19e6377",
+          "metrics": {
+            "D_peak": 0.459143518519,
+            "auc_D": 33.137500000044,
+            "mean_C": 0.999471767397,
+            "mean_R": 0.493740021847,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.plasticity2_report.v1"
+        },
+        "metric_diffs": {
+          "auc_D_abs": 4.4e-11,
+          "mean_C_abs": 0.0,
+          "mean_R_abs": 0.0
+        },
+        "oracle": {
+          "evidence_hash": "783c890ff63d46e4fee302840e187a9c5c066406257bec5108ee1dafd19e6377",
+          "metrics": {
+            "D_peak": 0.459143518519,
+            "auc_D": 33.1375,
+            "mean_C": 0.999471767397,
+            "mean_R": 0.493740021847,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.plasticity2_report.v1"
+        },
+        "within_tolerance": false
+      },
+      "recipe": "circadian_score_v1",
+      "recovery": {
+        "candidate": {
+          "evidence_hash": "783c890ff63d46e4fee302840e187a9c5c066406257bec5108ee1dafd19e6377",
+          "metrics": {
+            "D_peak": 0.459143518519,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.recovery_report.v1"
+        },
+        "metric_diffs": {
+          "D_peak_abs": 0.0,
+          "t_peak_hours_abs": 0.0,
+          "t_recover_80_hours_abs": 0.0
+        },
+        "oracle": {
+          "evidence_hash": "783c890ff63d46e4fee302840e187a9c5c066406257bec5108ee1dafd19e6377",
+          "metrics": {
+            "D_peak": 0.459143518519,
+            "t_peak_hours": 24.0,
+            "t_recover_80_hours": 168.0
+          },
+          "schema": "semiocore.biomed.recovery_report.v1"
+        },
+        "within_tolerance": false
+      },
+      "timepoints": [
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/circadian_score_v1/t0.score.json",
+          "label": "t0",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/wearable_t0.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.038194444444,
+              "score_hash": "70b88feef580ed5a92d0b2077f9a26bfd3f77997f991dfb0ae308b2effb82957"
+            },
+            "candidate": {
+              "score": 0.038194444444,
+              "score_hash": "70b88feef580ed5a92d0b2077f9a26bfd3f77997f991dfb0ae308b2effb82957"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 0.0,
+                "candidate": 0.0,
+                "feature": "activity_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.111111111111,
+                "candidate": 0.111111111111,
+                "feature": "hr_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.671514465234,
+                "candidate": 0.671514465234,
+                "feature": "hr_steps_coupling"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.041666666667,
+                "candidate": 0.041666666667,
+                "feature": "hrv_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 60.0,
+                "candidate": 60.0,
+                "feature": "mean_hr_bpm"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 38.333333333333,
+                "candidate": 38.333333333333,
+                "feature": "mean_hrv_rmssd_ms"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.0,
+                "candidate": 0.0,
+                "feature": "sleep_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 420.0,
+                "candidate": 420.0,
+                "feature": "total_sleep_min"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 9100.0,
+                "candidate": 9100.0,
+                "feature": "total_steps"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "41fff17d3a1cbc0841b53d2e8944cd6dbe87de99678ed7c1322558dfc35b105d",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "circadian_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/circadian_score_v1/t24.score.json",
+          "label": "t24",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/wearable_t24.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.497337962963,
+              "score_hash": "e84fa0ebec3fe931801b12a6bb81363b3bb785b5d79fec772e52b2bdea0eced3"
+            },
+            "candidate": {
+              "score": 0.497337962963,
+              "score_hash": "e84fa0ebec3fe931801b12a6bb81363b3bb785b5d79fec772e52b2bdea0eced3"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 0.625,
+                "candidate": 0.625,
+                "feature": "activity_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.451851851852,
+                "candidate": 0.451851851852,
+                "feature": "hr_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": -0.458257569496,
+                "candidate": -0.458257569496,
+                "feature": "hr_steps_coupling"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.5125,
+                "candidate": 0.5125,
+                "feature": "hrv_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 75.333333333333,
+                "candidate": 75.333333333333,
+                "feature": "mean_hr_bpm"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 19.5,
+                "candidate": 19.5,
+                "feature": "mean_hrv_rmssd_ms"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.4,
+                "candidate": 0.4,
+                "feature": "sleep_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 300.0,
+                "candidate": 300.0,
+                "feature": "total_sleep_min"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 3000.0,
+                "candidate": 3000.0,
+                "feature": "total_steps"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "75964adbcb03792f0521f1e00719ebdda961471ce5aa97ffcf2f535f96db392d",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "circadian_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/circadian_score_v1/t72.score.json",
+          "label": "t72",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/wearable_t72.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.253819444444,
+              "score_hash": "7f3bd110b08ce53a8ff82318f5c21bb2edf2a8df2dae1c07fdd11b5b09ba3fec"
+            },
+            "candidate": {
+              "score": 0.253819444444,
+              "score_hash": "7f3bd110b08ce53a8ff82318f5c21bb2edf2a8df2dae1c07fdd11b5b09ba3fec"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 0.25,
+                "candidate": 0.25,
+                "feature": "activity_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.277777777778,
+                "candidate": 0.277777777778,
+                "feature": "hr_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.562568677126,
+                "candidate": 0.562568677126,
+                "feature": "hr_steps_coupling"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.2875,
+                "candidate": 0.2875,
+                "feature": "hrv_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 67.5,
+                "candidate": 67.5,
+                "feature": "mean_hr_bpm"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 28.5,
+                "candidate": 28.5,
+                "feature": "mean_hrv_rmssd_ms"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.2,
+                "candidate": 0.2,
+                "feature": "sleep_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 360.0,
+                "candidate": 360.0,
+                "feature": "total_sleep_min"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 6000.0,
+                "candidate": 6000.0,
+                "feature": "total_steps"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "b0306a07273e559e4912564a02e8fe7e7cc5fd181896c85f37f02647a857c312",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "circadian_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        },
+        {
+          "candidate_ref": "expected/biomed_levelc_v1/score/circadian_score_v1/t168.score.json",
+          "label": "t168",
+          "raw_ref": "fixtures/biomed_io_v1/levelc/wearable_t168.json",
+          "score_compare": {
+            "baseline": {
+              "score": 0.060763888889,
+              "score_hash": "6dc3140210f3fc3a675f3dca1ad1b54c93f26b02e346047db65800b74ca33037"
+            },
+            "candidate": {
+              "score": 0.060763888889,
+              "score_hash": "6dc3140210f3fc3a675f3dca1ad1b54c93f26b02e346047db65800b74ca33037"
+            },
+            "diff": {
+              "features_max_abs": 0.0,
+              "score_abs": 0.0
+            },
+            "feature_diffs": [
+              {
+                "abs": 0.0,
+                "baseline": 0.0,
+                "candidate": 0.0,
+                "feature": "activity_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.122222222222,
+                "candidate": 0.122222222222,
+                "feature": "hr_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.781996749269,
+                "candidate": 0.781996749269,
+                "feature": "hr_steps_coupling"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.0875,
+                "candidate": 0.0875,
+                "feature": "hrv_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 60.5,
+                "candidate": 60.5,
+                "feature": "mean_hr_bpm"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 36.5,
+                "candidate": 36.5,
+                "feature": "mean_hrv_rmssd_ms"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 0.033333333333,
+                "candidate": 0.033333333333,
+                "feature": "sleep_risk"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 410.0,
+                "candidate": 410.0,
+                "feature": "total_sleep_min"
+              },
+              {
+                "abs": 0.0,
+                "baseline": 8500.0,
+                "candidate": 8500.0,
+                "feature": "total_steps"
+              }
+            ],
+            "provenance": {
+              "created_utc": "1970-01-01T00:00:00+00:00",
+              "evidence_hash": "786f5952d8cb6c15692018465d0fa3ca5fe296a03da8be9d8576738e4cf46f6f",
+              "tool_version": "1.3.3"
+            },
+            "recipe": "circadian_score_v1",
+            "schema": "semiocore.audit.score_compare_report.v1",
+            "tolerance_abs": 0.0,
+            "within_tolerance": false
+          }
+        }
+      ],
+      "within_tolerance": false
+    }
+  ],
+  "schema": "semiocore.audit.tool_audit_report.v1",
+  "summary": {
+    "recipes_total": 3,
+    "recipes_within_tolerance": 0,
+    "within_tolerance": false
+  },
+  "tolerance_abs": 0.0,
+  "tool": {
+    "name": "fixture_tool"
+  }
+}

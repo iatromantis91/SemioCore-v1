@@ -1,0 +1,60 @@
+{
+  "$id": "semiocore.biomed.recovery_report.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.recovery_report.v1"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tool_version": {"type": "string"},
+        "created_utc": {"type": "string"},
+        "evidence_hash": {"type": "string"}
+      },
+      "required": ["tool_version", "created_utc", "evidence_hash"]
+    },
+    "recipe": {"type": "string"},
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "label": {"type": "string"},
+        "hours": {"type": "number"},
+        "score_hash": {"type": "string"},
+        "score": {"type": "number"}
+      },
+      "required": ["label", "hours", "score_hash", "score"]
+    },
+    "sigma": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {"type": "string"},
+          "hours": {"type": "number"},
+          "score_hash": {"type": "string"},
+          "score": {"type": "number"},
+          "D": {"type": "number"},
+          "T": {"type": "number"},
+          "R": {"type": "number"},
+          "C": {"type": ["number", "null"]}
+        },
+        "required": ["label", "hours", "score_hash", "score", "D", "T", "R", "C"]
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "D_peak": {"type": "number"},
+        "t_peak_hours": {"type": "number"},
+        "t_recover_80_hours": {"type": ["number", "null"]}
+      },
+      "required": ["D_peak", "t_peak_hours", "t_recover_80_hours"]
+    }
+  },
+  "required": ["schema", "provenance", "recipe", "baseline", "sigma", "metrics"]
+}

@@ -1,0 +1,154 @@
+{
+  "$id": "semiocore.audit.tool_audit_report.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.audit.tool_audit_report.v1"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tool_version": {"type": "string"},
+        "created_utc": {"type": "string"},
+        "evidence_hash": {"type": "string"}
+      },
+      "required": ["tool_version", "created_utc", "evidence_hash"]
+    },
+    "tool": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string"}
+      },
+      "required": ["name"]
+    },
+    "contracts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "suite": {"type": "string"},
+        "recipes": {"type": "array", "items": {"type": "string"}}
+      },
+      "required": ["suite", "recipes"]
+    },
+    "manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "ref": {"type": "string"},
+        "subject_id": {"type": "string"},
+        "baseline_label": {"type": "string"},
+        "post_labels": {"type": "array", "items": {"type": "string"}},
+        "hash": {"type": "string"}
+      },
+      "required": ["ref", "subject_id", "baseline_label", "post_labels", "hash"]
+    },
+    "tolerance_abs": {"type": "number"},
+    "recipes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "recipe": {"type": "string"},
+          "kind": {"type": "string"},
+          "timepoints": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "label": {"type": "string"},
+                "raw_ref": {"type": "string"},
+                "candidate_ref": {"type": "string"},
+                "score_compare": {"type": "object"}
+              },
+              "required": ["label", "raw_ref", "candidate_ref", "score_compare"]
+            }
+          },
+          "recovery": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "oracle": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "schema": {"type": "string"},
+                  "evidence_hash": {"type": "string"},
+                  "metrics": {"type": "object"}
+                },
+                "required": ["schema", "evidence_hash", "metrics"]
+              },
+              "candidate": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "schema": {"type": "string"},
+                  "evidence_hash": {"type": "string"},
+                  "metrics": {"type": "object"}
+                },
+                "required": ["schema", "evidence_hash", "metrics"]
+              },
+              "metric_diffs": {"type": "object"},
+              "within_tolerance": {"type": "boolean"}
+            },
+            "required": ["oracle", "candidate", "metric_diffs", "within_tolerance"]
+          },
+          "plasticity2": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "oracle": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "schema": {"type": "string"},
+                  "evidence_hash": {"type": "string"},
+                  "metrics": {"type": "object"}
+                },
+                "required": ["schema", "evidence_hash", "metrics"]
+              },
+              "candidate": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "schema": {"type": "string"},
+                  "evidence_hash": {"type": "string"},
+                  "metrics": {"type": "object"}
+                },
+                "required": ["schema", "evidence_hash", "metrics"]
+              },
+              "metric_diffs": {"type": "object"},
+              "within_tolerance": {"type": "boolean"}
+            },
+            "required": ["oracle", "candidate", "metric_diffs", "within_tolerance"]
+          },
+          "within_tolerance": {"type": "boolean"}
+        },
+        "required": ["recipe", "kind", "timepoints", "recovery", "plasticity2", "within_tolerance"]
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recipes_total": {"type": "integer"},
+        "recipes_within_tolerance": {"type": "integer"},
+        "within_tolerance": {"type": "boolean"}
+      },
+      "required": ["recipes_total", "recipes_within_tolerance", "within_tolerance"]
+    }
+  },
+  "required": [
+    "schema",
+    "provenance",
+    "tool",
+    "contracts",
+    "manifest",
+    "tolerance_abs",
+    "recipes",
+    "summary"
+  ]
+}

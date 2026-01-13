@@ -1,0 +1,32 @@
+{
+  "$id": "semiocore.biomed.recipes_index.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.recipes_index.v1"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tool_version": {"type": "string"},
+        "created_utc": {"type": "string"}
+      },
+      "required": ["tool_version", "created_utc"]
+    },
+    "recipes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "recipe_id": {"type": "string"},
+          "kind": {"type": "string"},
+          "expected_units": {"type": "object"}
+        },
+        "required": ["recipe_id", "kind", "expected_units"]
+      }
+    }
+  },
+  "required": ["schema", "provenance", "recipes"]
+}

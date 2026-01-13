@@ -1,0 +1,17 @@
+{
+  "schema": "semiocore.biomed.recovery_kinetics.v1",
+  "name": "recovery_kinetics",
+  "version": "1",
+  "inputs": {
+    "recovery_report": "semiocore.biomed.recovery_report.v1"
+  },
+  "outputs": {
+    "flags": ["slow_recovery", "non_reversible", "unstable_overshoot"]
+  },
+  "rules": {
+    "slow_recovery": "recovery_time_80_hours exceeds a recipe-calibrated threshold",
+    "non_reversible": "final delta does not return within tolerance of baseline",
+    "unstable_overshoot": "overshoot_max exceeds recipe-calibrated bounds"
+  },
+  "notes": "This contract formalizes failure modes and recovery slowdown as falsifiable conditions."
+}

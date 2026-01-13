@@ -1,0 +1,20 @@
+{
+  "schema": "semiocore.biomed.failure_conditions.v1",
+  "name": "failure_conditions",
+  "version": "1",
+  "scope": "Level-C falsifiability conditions",
+  "inputs": {
+    "labs_panel": "semiocore.biomed.labs_panel.v1",
+    "wearable_timeseries": "semiocore.biomed.wearable_timeseries.v1",
+    "score": "semiocore.biomed.score.v1",
+    "recovery_report": "semiocore.biomed.recovery_report.v1"
+  },
+  "conditions": [
+    "invalid_units",
+    "insufficient_observations",
+    "nonfinite_values",
+    "missing_required_signals",
+    "uninterpretable_timepoint_labels"
+  ],
+  "notes": "Failure conditions are recorded to make the pipeline explicitly falsifiable and to prevent silent success when inputs are out of spec."
+}

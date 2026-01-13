@@ -1,0 +1,74 @@
+{
+  "$id": "semiocore.audit.score_compare_report.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.audit.score_compare_report.v1"},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tool_version": {"type": "string"},
+        "created_utc": {"type": "string"},
+        "evidence_hash": {"type": "string"}
+      },
+      "required": ["tool_version", "created_utc", "evidence_hash"]
+    },
+    "recipe": {"type": "string"},
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "score_hash": {"type": "string"},
+        "score": {"type": "number"}
+      },
+      "required": ["score_hash", "score"]
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "score_hash": {"type": "string"},
+        "score": {"type": "number"}
+      },
+      "required": ["score_hash", "score"]
+    },
+    "tolerance_abs": {"type": "number"},
+    "diff": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "score_abs": {"type": "number"},
+        "features_max_abs": {"type": "number"}
+      },
+      "required": ["score_abs", "features_max_abs"]
+    },
+    "within_tolerance": {"type": "boolean"},
+    "feature_diffs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "feature": {"type": "string"},
+          "baseline": {"type": ["number", "null"]},
+          "candidate": {"type": ["number", "null"]},
+          "abs": {"type": "number"}
+        },
+        "required": ["feature", "baseline", "candidate", "abs"]
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "provenance",
+    "recipe",
+    "baseline",
+    "candidate",
+    "tolerance_abs",
+    "diff",
+    "within_tolerance",
+    "feature_diffs"
+  ]
+}

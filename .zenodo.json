@@ -1,0 +1,32 @@
+{
+  "creators": [
+    {
+      "name": "Huerta Castillo, Israel",
+      "orcid": "0009-0004-8615-8008",
+      "affiliation": "Universidade de Santiago de Compostela",
+      "type": "ProjectMember"
+    }
+  ],
+  "title": "SemioCore",
+  "version": "1.3.3",
+  "description": "SemioCore is a reproducibility-first toolkit for semiotic auditing. It makes biomedical interpretation regimes explicit, executable, and comparable under versioned, machine-verifiable contracts.",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/iatromantis91/semiocore-v1",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "keywords": [
+    "biosemiotics",
+    "bioinformatics",
+    "reproducibility",
+    "domain-specific language",
+    "aging",
+    "semiodynamics"
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "language": "eng"
+}

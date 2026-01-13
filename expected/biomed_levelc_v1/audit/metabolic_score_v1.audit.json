@@ -1,0 +1,73 @@
+{
+  "baseline": {
+    "score": 0.122476190476,
+    "score_hash": "f875fb770534e6ffd658b48e93d9d03c2525963749dc331fbbe6134c780e4ef5"
+  },
+  "candidate": {
+    "score": 0.122476190476,
+    "score_hash": "f875fb770534e6ffd658b48e93d9d03c2525963749dc331fbbe6134c780e4ef5"
+  },
+  "diff": {
+    "features_max_abs": 0.0,
+    "score_abs": 0.0
+  },
+  "feature_diffs": [
+    {
+      "abs": 0.0,
+      "baseline": 90.0,
+      "candidate": 90.0,
+      "feature": "fasting_glucose"
+    },
+    {
+      "abs": 0.0,
+      "baseline": 0.142857142857,
+      "candidate": 0.142857142857,
+      "feature": "glucose_risk"
+    },
+    {
+      "abs": 0.0,
+      "baseline": 5.2,
+      "candidate": 5.2,
+      "feature": "hba1c"
+    },
+    {
+      "abs": 0.0,
+      "baseline": 0.08,
+      "candidate": 0.08,
+      "feature": "hba1c_risk"
+    },
+    {
+      "abs": 0.0,
+      "baseline": 55.0,
+      "candidate": 55.0,
+      "feature": "hdl"
+    },
+    {
+      "abs": 0.0,
+      "baseline": 2.0,
+      "candidate": 2.0,
+      "feature": "tg_hdl_ratio"
+    },
+    {
+      "abs": 0.0,
+      "baseline": 0.166666666667,
+      "candidate": 0.166666666667,
+      "feature": "tg_hdl_risk"
+    },
+    {
+      "abs": 0.0,
+      "baseline": 110.0,
+      "candidate": 110.0,
+      "feature": "triglycerides"
+    }
+  ],
+  "provenance": {
+    "created_utc": "1970-01-01T00:00:00+00:00",
+    "evidence_hash": "db9133992d82f5f90d1e4a00a9e5b3414096d1f8dfe92c198cc2a4e6ffeeca60",
+    "tool_version": "1.3.3"
+  },
+  "recipe": "metabolic_score_v1",
+  "schema": "semiocore.audit.score_compare_report.v1",
+  "tolerance_abs": 0.0,
+  "within_tolerance": true
+}

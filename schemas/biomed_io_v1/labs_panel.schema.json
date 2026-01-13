@@ -1,0 +1,25 @@
+{
+  "$id": "semiocore.biomed.labs_panel.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.labs_panel.v1"},
+    "subject_id": {"type": "string"},
+    "collected_utc": {"type": "string"},
+    "labs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {"type": "string"},
+          "value": {"type": "number"},
+          "unit": {"type": "string"}
+        },
+        "required": ["name", "value", "unit"]
+      }
+    }
+  },
+  "required": ["schema", "labs"]
+}

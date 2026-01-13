@@ -1,0 +1,14 @@
+{
+  "schema": "semiocore.biomed.labs_panel.v1",
+  "subject_id": "S1",
+  "collected_utc": "1970-01-04T00:00:00Z",
+  "labs": [
+    {"name": "crp", "value": 3.0, "unit": "mg/L"},
+    {"name": "neutrophils", "value": 4.0, "unit": "10^9/L"},
+    {"name": "lymphocytes", "value": 1.8, "unit": "10^9/L"},
+    {"name": "fasting_glucose", "value": 105.0, "unit": "mg/dL"},
+    {"name": "hba1c", "value": 5.5, "unit": "%"},
+    {"name": "triglycerides", "value": 140.0, "unit": "mg/dL"},
+    {"name": "hdl", "value": 45.0, "unit": "mg/dL"}
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$id": "semiocore.biomed.recovery_kinetics.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.recovery_kinetics.v1"},
+    "name": {"const": "recovery_kinetics"},
+    "version": {"const": "1"},
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "recovery_report": {"type": "string"}
+      },
+      "required": ["recovery_report"]
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "flags": {"type": "array", "items": {"type": "string"}}
+      },
+      "required": ["flags"]
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": {"type": "string"}
+    },
+    "notes": {"type": "string"}
+  },
+  "required": ["schema", "name", "version", "inputs", "outputs"]
+}

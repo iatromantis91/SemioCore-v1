@@ -1,0 +1,49 @@
+{
+  "$id": "semiocore.biomed.wearable_timeseries.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.wearable_timeseries.v1"},
+    "subject_id": {"type": "string"},
+    "t0_utc": {"type": "string"},
+    "dt_seconds": {"type": "number"},
+    "series": {
+      "description": "Time series can be expressed as a list of named series (portable) or as a dict keyed by series name (compact).",
+      "oneOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "name": {"type": "string"},
+              "unit": {"type": "string"},
+              "values": {
+                "type": "array",
+                "items": {"type": "number"}
+              }
+            },
+            "required": ["name", "unit", "values"]
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "unit": {"type": "string"},
+              "values": {
+                "type": "array",
+                "items": {"type": "number"}
+              }
+            },
+            "required": ["unit", "values"]
+          }
+        }
+      ]
+    }
+  },
+  "required": ["schema", "series"]
+}

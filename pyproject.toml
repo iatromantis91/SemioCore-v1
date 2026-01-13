@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "semiocore"
+version = "1.3.3"
+description = "Contract-driven, deterministic toolchain for semiotic auditing of biomedical interpretation regimes"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Israel Huerta Castillo"}]
+license = {file = "LICENSE"}
+keywords = [
+  "biosemiotics",
+  "bioinformatics",
+  "reproducibility",
+  "domain-specific language",
+  "aging",
+  "semiodynamics",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+  "jsonschema>=4.22",
+]
+
+[project.urls]
+Repository = "https://github.com/iatromantis91/semiocore-v1"
+[project.optional-dependencies]
+test = [
+  "pytest>=8",
+  "jsonschema>=4.22",
+]
+dev = [
+  "pytest>=8",
+  "jsonschema>=4.22",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+semioc = "semioc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["semioc", "semioc.*"]
+exclude = ["tools*", "paper_figures*", "fixtures*", "programs*", "out*"]

@@ -1,0 +1,55 @@
+{
+  "schema": "semiocore.biomed.intervention_manifest.v1",
+  "subject_id": "fixture_subject_01",
+  "perturbation": {
+    "kind": "synthetic_fixture",
+    "description": "Deterministic Level-C synthetic perturbation manifest for regression tests."
+  },
+  "baseline": {
+    "label": "t0",
+    "offset_hours": 0,
+    "labs_ref": "fixtures/biomed_io_v1/levelc/labs_t0.json",
+    "wearable_ref": "fixtures/biomed_io_v1/levelc/wearable_t0.json",
+    "external_scores": {
+      "inflammation_score_v1": "expected/biomed_levelc_v1/score/inflammation_score_v1/t0.score.json",
+      "metabolic_score_v1": "expected/biomed_levelc_v1/score/metabolic_score_v1/t0.score.json",
+      "circadian_score_v1": "expected/biomed_levelc_v1/score/circadian_score_v1/t0.score.json"
+    }
+  },
+  "posts": [
+    {
+      "label": "t24",
+      "offset_hours": 24,
+      "labs_ref": "fixtures/biomed_io_v1/levelc/labs_t24.json",
+      "wearable_ref": "fixtures/biomed_io_v1/levelc/wearable_t24.json",
+      "external_scores": {
+        "inflammation_score_v1": "expected/biomed_levelc_v1/score/inflammation_score_v1/t24.score.json",
+        "metabolic_score_v1": "expected/biomed_levelc_v1/score/metabolic_score_v1/t24.score.json",
+        "circadian_score_v1": "expected/biomed_levelc_v1/score/circadian_score_v1/t24.score.json"
+      }
+    },
+    {
+      "label": "t72",
+      "offset_hours": 72,
+      "labs_ref": "fixtures/biomed_io_v1/levelc/labs_t72.json",
+      "wearable_ref": "fixtures/biomed_io_v1/levelc/wearable_t72.json",
+      "external_scores": {
+        "inflammation_score_v1": "expected/biomed_levelc_v1/score/inflammation_score_v1/t72.score.json",
+        "metabolic_score_v1": "expected/biomed_levelc_v1/score/metabolic_score_v1/t72.score.json",
+        "circadian_score_v1": "expected/biomed_levelc_v1/score/circadian_score_v1/t72.score.json"
+      }
+    },
+    {
+      "label": "t168",
+      "offset_hours": 168,
+      "labs_ref": "fixtures/biomed_io_v1/levelc/labs_t168.json",
+      "wearable_ref": "fixtures/biomed_io_v1/levelc/wearable_t168.json",
+      "external_scores": {
+        "inflammation_score_v1": "expected/biomed_levelc_v1/score/inflammation_score_v1/t168.score.json",
+        "metabolic_score_v1": "expected/biomed_levelc_v1/score/metabolic_score_v1/t168.score.json",
+        "circadian_score_v1": "expected/biomed_levelc_v1/score/circadian_score_v1/t168.score.json"
+      }
+    }
+  ],
+  "notes": "Synthetic manifest: file refs are relative to repo root."
+}

@@ -1,0 +1,31 @@
+{
+  "$id": "semiocore.biomed.coupling_index.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.coupling_index.v1"},
+    "name": {"const": "coupling_index"},
+    "version": {"const": "1"},
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "wearable_timeseries": {"type": "string"},
+        "scores": {"type": "string"}
+      },
+      "required": ["wearable_timeseries", "scores"]
+    },
+    "outputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "coupling_index": {"type": "string"},
+        "components": {"type": "array", "items": {"type": "string"}}
+      },
+      "required": ["coupling_index", "components"]
+    },
+    "notes": {"type": "string"}
+  },
+  "required": ["schema", "name", "version", "inputs", "outputs"]
+}

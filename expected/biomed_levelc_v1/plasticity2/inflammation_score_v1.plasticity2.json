@@ -1,0 +1,43 @@
+{
+  "metrics": {
+    "D_peak": 0.67,
+    "auc_D": 39.879999999984,
+    "mean_C": 0.842324239897,
+    "mean_R": 0.551133222775,
+    "t_peak_hours": 24.0,
+    "t_recover_80_hours": 168.0
+  },
+  "provenance": {
+    "created_utc": "1970-01-01T00:00:00+00:00",
+    "evidence_hash": "72fe6166958513afabffc293d293c17e162dd507abdd41314ff49e8703135739",
+    "tool_version": "1.3.3"
+  },
+  "recipe": "inflammation_score_v1",
+  "schema": "semiocore.biomed.plasticity2_report.v1",
+  "sigma": [
+    {
+      "C": 0.698313727938,
+      "D": 0.67,
+      "R": 0.0,
+      "T": 24.0,
+      "hours": 24.0,
+      "label": "t24"
+    },
+    {
+      "C": 0.8600726473,
+      "D": 0.192222222222,
+      "R": 0.713101160863,
+      "T": 72.0,
+      "hours": 72.0,
+      "label": "t72"
+    },
+    {
+      "C": 0.968586344452,
+      "D": 0.04,
+      "R": 0.940298507463,
+      "T": 168.0,
+      "hours": 168.0,
+      "label": "t168"
+    }
+  ]
+}

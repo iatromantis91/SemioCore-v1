@@ -1,0 +1,675 @@
+{
+  "contracts": [
+    {
+      "contract_id": "semiocore.ast.v1",
+      "doc_path": "docs/contract/ast.v1.md",
+      "fixtures": [
+        {
+          "name": "basic",
+          "path": "expected/ast/basic.ast.json",
+          "produced_by": {
+            "args": [
+              "--emit-ast"
+            ],
+            "cli": "semioc parse"
+          }
+        }
+      ],
+      "kind": "ast",
+      "schema_id_expected": "semiocore.ast.v1",
+      "schema_path": "schemas/ast.schema.json"
+    },
+    {
+      "contract_id": "semiocore.audit.score_compare_report.v1",
+      "doc_path": "docs/contract/audit_v1/score_compare_report.md",
+      "fixtures": [
+        {
+          "name": "inflammation",
+          "path": "expected/biomed_levelc_v1/audit/inflammation_score_v1.audit.json",
+          "produced_by": {
+            "args": [],
+            "cli": "semioc audit score-compare"
+          }
+        },
+        {
+          "name": "metabolic",
+          "path": "expected/biomed_levelc_v1/audit/metabolic_score_v1.audit.json",
+          "produced_by": {
+            "args": [],
+            "cli": "semioc audit score-compare"
+          }
+        },
+        {
+          "name": "circadian",
+          "path": "expected/biomed_levelc_v1/audit/circadian_score_v1.audit.json",
+          "produced_by": {
+            "args": [],
+            "cli": "semioc audit score-compare"
+          }
+        }
+      ],
+      "kind": "audit",
+      "schema_id_expected": "semiocore.audit.score_compare_report.v1",
+      "schema_path": "schemas/audit_v1/score_compare_report.schema.json"
+    },
+  {
+    "contract_id": "semiocore.audit.tool_audit_report.v1",
+    "doc_path": "docs/contract/audit_v1/tool_audit_report.md",
+    "fixtures": [
+      {
+        "name": "subject_01",
+        "path": "expected/biomed_levelc_v1/audit/tool_subject_01.audit.json",
+        "produced_by": {
+          "args": [],
+          "cli": "semioc audit run"
+        }
+      }
+    ],
+    "kind": "audit",
+    "schema_id_expected": "semiocore.audit.tool_audit_report.v1",
+    "schema_path": "schemas/audit_v1/tool_audit_report.schema.json"
+  },
+    {
+      "contract_id": "semiocore.biomed.score.v1",
+      "doc_path": "docs/contract/biomed_io_v1/score.md",
+      "fixtures": [
+        {
+          "name": "inflammation_score_v1:t0",
+          "path": "expected/biomed_levelc_v1/score/inflammation_score_v1/t0.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "inflammation_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "inflammation_score_v1:t24",
+          "path": "expected/biomed_levelc_v1/score/inflammation_score_v1/t24.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "inflammation_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "inflammation_score_v1:t72",
+          "path": "expected/biomed_levelc_v1/score/inflammation_score_v1/t72.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "inflammation_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "inflammation_score_v1:t168",
+          "path": "expected/biomed_levelc_v1/score/inflammation_score_v1/t168.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "inflammation_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "metabolic_score_v1:t0",
+          "path": "expected/biomed_levelc_v1/score/metabolic_score_v1/t0.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "metabolic_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "metabolic_score_v1:t24",
+          "path": "expected/biomed_levelc_v1/score/metabolic_score_v1/t24.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "metabolic_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "metabolic_score_v1:t72",
+          "path": "expected/biomed_levelc_v1/score/metabolic_score_v1/t72.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "metabolic_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "metabolic_score_v1:t168",
+          "path": "expected/biomed_levelc_v1/score/metabolic_score_v1/t168.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "metabolic_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "circadian_score_v1:t0",
+          "path": "expected/biomed_levelc_v1/score/circadian_score_v1/t0.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "circadian_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "circadian_score_v1:t24",
+          "path": "expected/biomed_levelc_v1/score/circadian_score_v1/t24.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "circadian_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "circadian_score_v1:t72",
+          "path": "expected/biomed_levelc_v1/score/circadian_score_v1/t72.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "circadian_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        },
+        {
+          "name": "circadian_score_v1:t168",
+          "path": "expected/biomed_levelc_v1/score/circadian_score_v1/t168.score.json",
+          "produced_by": {
+            "args": [
+              "--recipe",
+              "circadian_score_v1"
+            ],
+            "cli": "semioc biomed score"
+          }
+        }
+      ],
+      "kind": "biomed_artifact",
+      "schema_id_expected": "semiocore.biomed.score.v1",
+      "schema_path": "schemas/biomed_io_v1/score.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.labs_panel.v1",
+      "doc_path": "docs/contract/biomed_io_v1/labs_panel.md",
+      "fixtures": [
+        {
+          "name": "t0",
+          "path": "fixtures/biomed_io_v1/levelc/labs_t0.json",
+          "produced_by": {
+            "args": "[]",
+            "cli": "fixtures"
+          }
+        },
+        {
+          "name": "t24",
+          "path": "fixtures/biomed_io_v1/levelc/labs_t24.json",
+          "produced_by": {
+            "args": "[]",
+            "cli": "fixtures"
+          }
+        },
+        {
+          "name": "t72",
+          "path": "fixtures/biomed_io_v1/levelc/labs_t72.json",
+          "produced_by": {
+            "args": "[]",
+            "cli": "fixtures"
+          }
+        },
+        {
+          "name": "t168",
+          "path": "fixtures/biomed_io_v1/levelc/labs_t168.json",
+          "produced_by": {
+            "args": "[]",
+            "cli": "fixtures"
+          }
+        }
+      ],
+      "kind": "biomed_io",
+      "schema_id_expected": "semiocore.biomed.labs_panel.v1",
+      "schema_path": "schemas/biomed_io_v1/labs_panel.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.wearable_timeseries.v1",
+      "doc_path": "docs/contract/biomed_io_v1/wearable_timeseries.md",
+      "fixtures": [
+        {
+          "name": "t0",
+          "path": "fixtures/biomed_io_v1/levelc/wearable_t0.json",
+          "produced_by": {
+            "args": "[]",
+            "cli": "fixtures"
+          }
+        },
+        {
+          "name": "t24",
+          "path": "fixtures/biomed_io_v1/levelc/wearable_t24.json",
+          "produced_by": {
+            "args": "[]",
+            "cli": "fixtures"
+          }
+        },
+        {
+          "name": "t72",
+          "path": "fixtures/biomed_io_v1/levelc/wearable_t72.json",
+          "produced_by": {
+            "args": "[]",
+            "cli": "fixtures"
+          }
+        },
+        {
+          "name": "t168",
+          "path": "fixtures/biomed_io_v1/levelc/wearable_t168.json",
+          "produced_by": {
+            "args": "[]",
+            "cli": "fixtures"
+          }
+        }
+      ],
+      "kind": "biomed_io",
+      "schema_id_expected": "semiocore.biomed.wearable_timeseries.v1",
+      "schema_path": "schemas/biomed_io_v1/wearable_timeseries.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.intervention_manifest.v1",
+      "kind": "biomed_io_v1",
+      "schema_id_expected": "semiocore.biomed.intervention_manifest.v1",
+      "schema_path": "schemas/biomed_io_v1/intervention_manifest.schema.json",
+      "doc_path": "docs/contract/biomed_io_v1/intervention_manifest.md",
+      "fixtures": [
+        {
+          "name": "levelc_manifest",
+          "path": "fixtures/biomed_io_v1/levelc/intervention_manifest.json",
+          "produced_by": {
+            "method": "hand_authored",
+            "seed": 0
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "semiocore.biomed.plasticity2_report.v1",
+      "doc_path": "docs/contract/biomed_levelc_v1/plasticity2_report.md",
+      "fixtures": [
+        {
+          "name": "inflammation",
+          "path": "expected/biomed_levelc_v1/plasticity2/inflammation_score_v1.plasticity2.json",
+          "produced_by": {
+            "args": [],
+            "cli": "semioc biomed plasticity2"
+          }
+        },
+        {
+          "name": "metabolic",
+          "path": "expected/biomed_levelc_v1/plasticity2/metabolic_score_v1.plasticity2.json",
+          "produced_by": {
+            "args": [],
+            "cli": "semioc biomed plasticity2"
+          }
+        },
+        {
+          "name": "circadian",
+          "path": "expected/biomed_levelc_v1/plasticity2/circadian_score_v1.plasticity2.json",
+          "produced_by": {
+            "args": [],
+            "cli": "semioc biomed plasticity2"
+          }
+        }
+      ],
+      "kind": "biomed_levelc",
+      "schema_id_expected": "semiocore.biomed.plasticity2_report.v1",
+      "schema_path": "schemas/biomed_levelc_v1/plasticity2_report.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.recipes_index.v1",
+      "doc_path": "docs/contract/biomed_levelc_v1/recipes_index.md",
+      "fixtures": [
+        {
+          "name": "default",
+          "path": "expected/biomed_levelc_v1/registry/recipes_index.json",
+          "produced_by": {
+            "args": [
+              "--emit-index"
+            ],
+            "cli": "semioc biomed recipes"
+          }
+        }
+      ],
+      "kind": "biomed_levelc",
+      "schema_id_expected": "semiocore.biomed.recipes_index.v1",
+      "schema_path": "schemas/biomed_levelc_v1/recipes_index.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.recovery_report.v1",
+      "doc_path": "docs/contract/biomed_levelc_v1/recovery_report.md",
+      "fixtures": [
+        {
+          "name": "inflammation",
+          "path": "expected/biomed_levelc_v1/recovery/inflammation_score_v1.recovery.json",
+          "produced_by": {
+            "args": [
+              "--baseline-label",
+              "t0"
+            ],
+            "cli": "semioc biomed compare"
+          }
+        },
+        {
+          "name": "metabolic",
+          "path": "expected/biomed_levelc_v1/recovery/metabolic_score_v1.recovery.json",
+          "produced_by": {
+            "args": [
+              "--baseline-label",
+              "t0"
+            ],
+            "cli": "semioc biomed compare"
+          }
+        },
+        {
+          "name": "circadian",
+          "path": "expected/biomed_levelc_v1/recovery/circadian_score_v1.recovery.json",
+          "produced_by": {
+            "args": [
+              "--baseline-label",
+              "t0"
+            ],
+            "cli": "semioc biomed compare"
+          }
+        }
+      ],
+      "kind": "biomed_levelc",
+      "schema_id_expected": "semiocore.biomed.recovery_report.v1",
+      "schema_path": "schemas/biomed_levelc_v1/recovery_report.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.coupling_index.v1",
+      "kind": "biomed_levelc_v1",
+      "schema_id_expected": "semiocore.biomed.coupling_index.v1",
+      "schema_path": "schemas/biomed_levelc_v1/coupling_index.schema.json",
+      "doc_path": "docs/contract/biomed_levelc_v1/coupling_index.md",
+      "fixtures": [
+        {
+          "name": "descriptor",
+          "path": "semioc/contracts/coupling_index.v1.json",
+          "produced_by": {
+            "method": "hand_authored"
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "semiocore.biomed.failure_conditions.v1",
+      "kind": "biomed_levelc_v1",
+      "schema_id_expected": "semiocore.biomed.failure_conditions.v1",
+      "schema_path": "schemas/biomed_levelc_v1/failure_conditions.schema.json",
+      "doc_path": "docs/contract/biomed_levelc_v1/failure_conditions.md",
+      "fixtures": [
+        {
+          "name": "descriptor",
+          "path": "semioc/contracts/failure_conditions.v1.json",
+          "produced_by": {
+            "method": "hand_authored"
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "semiocore.biomed.recovery_kinetics.v1",
+      "kind": "biomed_levelc_v1",
+      "schema_id_expected": "semiocore.biomed.recovery_kinetics.v1",
+      "schema_path": "schemas/biomed_levelc_v1/recovery_kinetics.schema.json",
+      "doc_path": "docs/contract/biomed_levelc_v1/recovery_kinetics.md",
+      "fixtures": [
+        {
+          "name": "descriptor",
+          "path": "semioc/contracts/recovery_kinetics.v1.json",
+          "produced_by": {
+            "method": "hand_authored"
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "semiocore.biomed.trajectory_comparator.v2",
+      "kind": "biomed_levelc_v1",
+      "schema_id_expected": "semiocore.biomed.trajectory_comparator.v2",
+      "schema_path": "schemas/biomed_levelc_v1/trajectory_comparator_v2.schema.json",
+      "doc_path": "docs/contract/biomed_levelc_v1/trajectory_comparator_v2.md",
+      "fixtures": [
+        {
+          "name": "descriptor",
+          "path": "semioc/contracts/trajectory_comparator.v2.json",
+          "produced_by": {
+            "method": "hand_authored"
+          }
+        }
+      ]
+    },
+    {
+      "contract_id": "semiocore.biomed.circadian_disruption.v1",
+      "doc_path": "docs/contract/biomed_v1/circadian_disruption.md",
+      "fixtures": [
+        {
+          "name": "manifest_v1",
+          "path": "fixtures/biomed_v1/circadian_disruption.fixture.json",
+          "produced_by": {
+            "args": [],
+            "cli": "manual"
+          }
+        }
+      ],
+      "kind": "biomed_regime",
+      "schema_id_expected": "semiocore.biomed.circadian_disruption.v1",
+      "schema_path": "schemas/biomed_v1/circadian_disruption.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.frailty_phenotype.v1",
+      "doc_path": "docs/contract/biomed_v1/frailty_phenotype.md",
+      "fixtures": [
+        {
+          "name": "manifest_v1",
+          "path": "fixtures/biomed_v1/frailty_phenotype.fixture.json",
+          "produced_by": {
+            "args": [],
+            "cli": "manual"
+          }
+        }
+      ],
+      "kind": "biomed_regime",
+      "schema_id_expected": "semiocore.biomed.frailty_phenotype.v1",
+      "schema_path": "schemas/biomed_v1/frailty_phenotype.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.inflammation_proxy.v1",
+      "doc_path": "docs/contract/biomed_v1/inflammation_proxy.md",
+      "fixtures": [
+        {
+          "name": "manifest_v1",
+          "path": "fixtures/biomed_v1/inflammation_proxy.fixture.json",
+          "produced_by": {
+            "args": [],
+            "cli": "manual"
+          }
+        }
+      ],
+      "kind": "biomed_regime",
+      "schema_id_expected": "semiocore.biomed.inflammation_proxy.v1",
+      "schema_path": "schemas/biomed_v1/inflammation_proxy.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.metabolic_risk.v1",
+      "doc_path": "docs/contract/biomed_v1/metabolic_risk.md",
+      "fixtures": [
+        {
+          "name": "manifest_v1",
+          "path": "fixtures/biomed_v1/metabolic_risk.fixture.json",
+          "produced_by": {
+            "args": [],
+            "cli": "manual"
+          }
+        }
+      ],
+      "kind": "biomed_regime",
+      "schema_id_expected": "semiocore.biomed.metabolic_risk.v1",
+      "schema_path": "schemas/biomed_v1/metabolic_risk.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.qc_regime.v1",
+      "doc_path": "docs/contract/biomed_v1/qc_regime.md",
+      "fixtures": [
+        {
+          "name": "manifest_v1",
+          "path": "fixtures/biomed_v1/qc_regime.fixture.json",
+          "produced_by": {
+            "args": [],
+            "cli": "manual"
+          }
+        }
+      ],
+      "kind": "biomed_regime",
+      "schema_id_expected": "semiocore.biomed.qc_regime.v1",
+      "schema_path": "schemas/biomed_v1/qc_regime.schema.json"
+    },
+    {
+      "contract_id": "semiocore.biomed.trajectory_comparator.v1",
+      "doc_path": "docs/contract/biomed_v1/trajectory_comparator.md",
+      "fixtures": [
+        {
+          "name": "manifest_v1",
+          "path": "fixtures/biomed_v1/trajectory_comparator.fixture.json",
+          "produced_by": {
+            "args": [],
+            "cli": "manual"
+          }
+        }
+      ],
+      "kind": "biomed_regime",
+      "schema_id_expected": "semiocore.biomed.trajectory_comparator.v1",
+      "schema_path": "schemas/biomed_v1/trajectory_comparator.schema.json"
+    },
+    {
+      "contract_id": "semiocore.ctxscan.v1",
+      "doc_path": "docs/contract/ctxscan.v1.md",
+      "fixtures": [
+        {
+          "name": "expected_e1",
+          "path": "fixtures/expected/e1.ctxscan.json",
+          "produced_by": {
+            "args": [
+              "programs/e1_fusion.sc",
+              "--world",
+              "fixtures/world/paper_world.json"
+            ],
+            "cli": "semioc ctxscan"
+          }
+        },
+        {
+          "name": "expected_e2",
+          "path": "fixtures/expected/e2.ctxscan.json",
+          "produced_by": {
+            "args": [
+              "programs/e2_border.sc",
+              "--world",
+              "fixtures/world/paper_world.json"
+            ],
+            "cli": "semioc ctxscan"
+          }
+        },
+        {
+          "name": "expected_e3",
+          "path": "fixtures/expected/e3.ctxscan.json",
+          "produced_by": {
+            "args": [
+              "programs/e3_noise.sc",
+              "--world",
+              "fixtures/world/paper_world.json"
+            ],
+            "cli": "semioc ctxscan"
+          }
+        }
+      ],
+      "kind": "ctxscan",
+      "schema_id_expected": "semiocore.ctxscan.v1",
+      "schema_path": "schemas/ctxscan.schema.json"
+    },
+    {
+      "contract_id": "semiocore.lang.v1",
+      "doc_path": "docs/contract/lang.v1.md",
+      "fixtures": [
+        {
+          "name": "basic",
+          "path": "expected/lang/basic.lang.json",
+          "produced_by": {
+            "args": [
+              "--emit-lang"
+            ],
+            "cli": "semioc parse"
+          }
+        }
+      ],
+      "kind": "lang_manifest",
+      "schema_id_expected": "semiocore.lang.v1",
+      "schema_path": "schemas/lang.schema.json"
+    },
+    {
+      "contract_id": "semiocore.plasticity.v1",
+      "doc_path": "docs/contract/plasticity.v1.md",
+      "fixtures": [
+        {
+          "name": "basic",
+          "path": "expected/plasticity/basic.plasticity.json",
+          "produced_by": {
+            "args": [
+              "--emit-report"
+            ],
+            "cli": "semioc plasticity"
+          }
+        }
+      ],
+      "kind": "plasticity_report",
+      "schema_id_expected": "semiocore.plasticity.v1",
+      "schema_path": "schemas/plasticity.schema.json"
+    },
+    {
+      "contract_id": "semiocore.trace.v1",
+      "doc_path": "docs/contract/trace.v1.md",
+      "fixtures": [
+        {
+          "name": "expected_e1",
+          "path": "fixtures/expected/e1.trace.json",
+          "produced_by": {
+            "args": [],
+            "cli": "semioc run"
+          }
+        }
+      ],
+      "kind": "trace",
+      "schema_id_expected": "semiocore.trace.v1",
+      "schema_path": "schemas/trace.schema.json"
+    }
+  ],
+  "registry_version": "1",
+  "toolchain": "semiocore"
+}

@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "hours": 0.0,
+    "label": "t0",
+    "score": 0.11,
+    "score_hash": "cb9418e87a4c71bd4af8db0c4b25a67f334d66daaabc5e17a9ebe93b23638060"
+  },
+  "metrics": {
+    "D_peak": 0.67,
+    "t_peak_hours": 24.0,
+    "t_recover_80_hours": 168.0
+  },
+  "provenance": {
+    "created_utc": "1970-01-01T00:00:00+00:00",
+    "evidence_hash": "72fe6166958513afabffc293d293c17e162dd507abdd41314ff49e8703135739",
+    "tool_version": "1.3.3"
+  },
+  "recipe": "inflammation_score_v1",
+  "schema": "semiocore.biomed.recovery_report.v1",
+  "sigma": [
+    {
+      "C": 0.698313727938,
+      "D": 0.67,
+      "R": 0.0,
+      "T": 24.0,
+      "hours": 24.0,
+      "label": "t24",
+      "score": 0.78,
+      "score_hash": "a364d35e93e9b775fdd1feb09755af58db6d5fe0770b83d1b0cc8bf612119fc8"
+    },
+    {
+      "C": 0.8600726473,
+      "D": 0.192222222222,
+      "R": 0.713101160863,
+      "T": 72.0,
+      "hours": 72.0,
+      "label": "t72",
+      "score": 0.302222222222,
+      "score_hash": "8356f20039d8ceb6ff4333a643195502794655dceb55fee14592fea58e3beca1"
+    },
+    {
+      "C": 0.968586344452,
+      "D": 0.04,
+      "R": 0.940298507463,
+      "T": 168.0,
+      "hours": 168.0,
+      "label": "t168",
+      "score": 0.15,
+      "score_hash": "f124e244b7818aeda7d724f36b09df90d4f974aa9cbf76200e17504c0c13eddd"
+    }
+  ]
+}

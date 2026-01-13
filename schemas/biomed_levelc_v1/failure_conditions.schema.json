@@ -1,0 +1,24 @@
+{
+  "$id": "semiocore.biomed.failure_conditions.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "semiocore.biomed.failure_conditions.v1"},
+    "name": {"const": "failure_conditions"},
+    "version": {"const": "1"},
+    "scope": {"type": "string"},
+    "inputs": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "notes": {"type": "string"}
+  },
+  "required": ["schema", "name", "version", "scope", "inputs", "conditions"]
+}

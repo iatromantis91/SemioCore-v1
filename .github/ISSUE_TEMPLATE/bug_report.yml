@@ -1,0 +1,24 @@
+name: Bug report
+description: Report a reproducibility, contract, or CLI defect
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Include the command(s), inputs, and the observed output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What was expected?
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, SemioCore version.
+    validations:
+      required: true

@@ -1,0 +1,52 @@
+{
+  "baseline": {
+    "hours": 0.0,
+    "label": "t0",
+    "score": 0.038194444444,
+    "score_hash": "70b88feef580ed5a92d0b2077f9a26bfd3f77997f991dfb0ae308b2effb82957"
+  },
+  "metrics": {
+    "D_peak": 0.459143518519,
+    "t_peak_hours": 24.0,
+    "t_recover_80_hours": 168.0
+  },
+  "provenance": {
+    "created_utc": "1970-01-01T00:00:00+00:00",
+    "evidence_hash": "783c890ff63d46e4fee302840e187a9c5c066406257bec5108ee1dafd19e6377",
+    "tool_version": "1.3.3"
+  },
+  "recipe": "circadian_score_v1",
+  "schema": "semiocore.biomed.recovery_report.v1",
+  "sigma": [
+    {
+      "C": 0.998514473127,
+      "D": 0.459143518519,
+      "R": 0.0,
+      "T": 24.0,
+      "hours": 24.0,
+      "label": "t24",
+      "score": 0.497337962963,
+      "score_hash": "e84fa0ebec3fe931801b12a6bb81363b3bb785b5d79fec772e52b2bdea0eced3"
+    },
+    {
+      "C": 0.999902959344,
+      "D": 0.215625,
+      "R": 0.53037559869,
+      "T": 72.0,
+      "hours": 72.0,
+      "label": "t72",
+      "score": 0.253819444444,
+      "score_hash": "7f3bd110b08ce53a8ff82318f5c21bb2edf2a8df2dae1c07fdd11b5b09ba3fec"
+    },
+    {
+      "C": 0.99999786972,
+      "D": 0.022569444445,
+      "R": 0.95084446685,
+      "T": 168.0,
+      "hours": 168.0,
+      "label": "t168",
+      "score": 0.060763888889,
+      "score_hash": "6dc3140210f3fc3a675f3dca1ad1b54c93f26b02e346047db65800b74ca33037"
+    }
+  ]
+}
