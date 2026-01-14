@@ -37,7 +37,7 @@ SemioCore releases are intended to be archived on Zenodo. For reproducible citat
 @software{huerta_castillo_semiocore,
   author  = {Huerta Castillo, Israel},
   title   = {SemioCore},
-  url     = {https://github.com/iatromantis91/SemioCore},
+  url     = {https://github.com/iatromantis91/SemioCore-v1},
   date    = {2026-01-13},
   doi     = {https://doi.org/10.5281/zenodo.18237327}
 }
