@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse, json, math, sys
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 from typing import Any, Set
 
 def drop_fields(obj: Any, ignore: Set[str]) -> Any:

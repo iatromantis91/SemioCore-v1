@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 from dataclasses import dataclass
 from typing import Optional, List
 

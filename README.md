@@ -143,3 +143,12 @@ The paper demo is kept as a reproducibility baseline and can be executed:
 ```bash
 make paper-demo
 ```
+
+## License
+
+SemioCore is licensed under the **PolyForm Noncommercial License 1.0.0**.
+
+- **Noncommercial use** is permitted under the terms of the license.
+- **Commercial use** (e.g., selling an app, offering a paid service/SaaS, bundling into a paid product, or any use primarily intended for commercial advantage or monetary compensation) is **not permitted** under the default license.
+
+For commercial licensing, see: `COMMERCIAL-LICENSE.md`.

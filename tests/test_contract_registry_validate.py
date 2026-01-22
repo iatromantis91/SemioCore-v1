@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 from pathlib import Path
 
 from semioc.contracts.registry import validate_registry

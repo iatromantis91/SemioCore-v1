@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import subprocess, sys
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 
 def main():
     if len(sys.argv) != 3:

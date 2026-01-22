@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 import re
 from typing import Optional, List, Tuple
 from .model import Program, Context, Op, Stmt

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 from typing import Any, Dict, List, Optional
 
 def load_json(path: str) -> Any:

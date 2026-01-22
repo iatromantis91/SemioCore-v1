@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 """Pytest configuration.
 
 This repository is usually exercised as an installed package.
