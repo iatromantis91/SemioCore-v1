@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 # semioc/contract_ids.py
 LANG_SCHEMA_V1 = "semiocore.lang.v1"
 AST_SCHEMA_V1  = "semiocore.ast.v1"

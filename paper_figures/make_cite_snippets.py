@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 import csv
 import os
 from typing import Dict, List, Any, Optional

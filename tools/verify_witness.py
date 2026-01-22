@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 
 import argparse
 import hashlib

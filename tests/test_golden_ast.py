@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 from __future__ import annotations
 import json
 from pathlib import Path

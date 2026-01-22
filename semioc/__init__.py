@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 """SemioCore.
 
 SemioCore is a deterministic, contract-driven toolchain for reproducible

@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 import os
 from dataclasses import replace, is_dataclass
 from itertools import permutations

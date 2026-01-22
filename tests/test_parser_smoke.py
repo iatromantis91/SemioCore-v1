@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 # tests/test_parser_smoke.py
 from semioc.parser import parse_program_to_ast
 from semioc.contract_ids import AST_SCHEMA_V1

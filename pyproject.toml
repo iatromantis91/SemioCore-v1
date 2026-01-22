@@ -9,7 +9,7 @@ description = "Contract-driven, deterministic toolchain for semiotic auditing of
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{name = "Israel Huerta Castillo"}]
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 keywords = [
   "biosemiotics",
   "bioinformatics",

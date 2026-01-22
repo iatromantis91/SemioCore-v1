@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 """Deterministic biomed recipes.
 
 Recipes are small, versioned scoring functions. They are intended to be:

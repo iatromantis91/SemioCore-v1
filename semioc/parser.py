@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
 # semioc/parser.py
 from __future__ import annotations
 from typing import Any
